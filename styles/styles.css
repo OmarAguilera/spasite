@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.Gcont > * {
+  box-shadow: -1px 1px 7px 0px black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.widget1 {
+  grid-area: widget1;
+}
+
+.widget2 {
+  grid-area: widget2;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.Gcont {
+  display: grid;
+  grid-template: "navbar" 60px "header" 400px "main" 1000px "sidebar" 200px "widget1" 125px "widget2" 125px "footer" 250px;
+}
+
+@media (min-width: 600px) {
+  .Gcont {
+    background-color: rgb(192, 117, 117);
+    grid-template: "header header" 400px "navbar navbar" 60px "main main" 1000px "sidebar sidebar" 150px "widget1 widget2" 250px "footer footer" 300px;
+  }
+}
+@media (min-width: 900px) {
+  .Gcont {
+    background-color: rgb(255, 0, 0);
+    grid-template: "header header header" 400px "navbar navbar navbar" 60px "main main sidebar" 1000px "main main sidebar" "widget1 widget2 ." 300px "footer footer footer" 400px/auto auto 200px;
+  }
+}/*# sourceMappingURL=styles.css.map */
